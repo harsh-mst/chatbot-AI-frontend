@@ -1,0 +1,120 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: color-mix(in oklch, var(--color-bg) 80%, transparent);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-divider);
+  transition: background var(--transition);
+}
+
+.header-inner {
+  max-width: var(--content-wide);
+  margin-inline: auto;
+  padding: var(--space-4) var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--color-primary);
+  color: white;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 10px oklch(from var(--color-primary) l c h / 0.2);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.nav-links a {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: all var(--transition);
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--color-text);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.btn-theme {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: grid;
+  place-items: center;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  transition: all var(--transition);
+}
+
+.btn-theme:hover {
+  border-color: var(--color-text);
+  color: var(--color-text);
+  background: var(--color-surface-offset);
+}
+
+.btn-subscribe {
+  background: var(--color-text);
+  color: var(--color-bg);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-full);
+  transition: all var(--transition);
+}
+
+.btn-subscribe:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  opacity: 0.9;
+}
+
+@media (max-width: 800px) {
+  .nav-links {
+    display: none;
+  }
+}

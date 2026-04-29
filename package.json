@@ -1,0 +1,27 @@
+{
+  "name": "medcare-react-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "framer-motion": "^11.0.0",
+    "lucide-react": "^0.400.0",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react": "^4.2.0"
+  },
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead"],
+    "development": ["last 1 chrome version"]
+  }
+}

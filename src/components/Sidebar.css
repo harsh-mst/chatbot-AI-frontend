@@ -1,0 +1,19 @@
+.sidebar{display:flex;flex-direction:column;gap:var(--space-8)}
+.sidebar-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-6)}
+.sidebar-card h3{font-family:var(--font-display);font-size:var(--text-lg);font-weight:400;margin-bottom:var(--space-4)}
+.sidebar-card p{font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-4);line-height:1.7}
+.input-row{display:flex;gap:var(--space-2)}
+.input-row input{flex:1;padding:var(--space-2) var(--space-3);border:1px solid var(--color-border);border-radius:var(--radius-md);background:var(--color-bg);font-size:var(--text-sm);color:var(--color-text);outline:none;transition:border-color var(--transition)}
+.input-row input:focus{border-color:var(--color-primary)}
+.input-row button{background:var(--color-primary);color:#fff;padding:var(--space-2) var(--space-4);border-radius:var(--radius-md);font-size:var(--text-sm);font-weight:500;transition:background var(--transition)}
+.input-row button:hover{background:var(--color-primary-hover)}
+.doctor-list{display:flex;flex-direction:column;gap:var(--space-3)}
+.doctor-item{display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);border-radius:var(--radius-lg);background:var(--color-surface-offset)}
+.doctor-avatar{width:40px;height:40px;border-radius:var(--radius-full);background:var(--color-primary);display:grid;place-items:center;color:#fff;font-size:var(--text-sm);font-weight:600;flex-shrink:0}
+.doctor-info{flex:1;min-width:0}
+.doctor-name{font-size:var(--text-sm);font-weight:600}
+.doctor-spec{font-size:var(--text-xs);color:var(--color-text-muted)}
+.doctor-avail{font-size:var(--text-xs);color:var(--color-primary);font-weight:500;white-space:nowrap}
+.tags-cloud{display:flex;flex-wrap:wrap;gap:var(--space-2)}
+.tag{font-size:var(--text-xs);padding:var(--space-1) var(--space-3);border:1px solid var(--color-border);border-radius:var(--radius-full);color:var(--color-text-muted);transition:all var(--transition)}
+.tag:hover{border-color:var(--color-primary);color:var(--color-primary)}
