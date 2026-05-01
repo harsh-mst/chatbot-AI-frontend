@@ -412,3 +412,220 @@
     max-height: none;
   }
 }
+
+/* ── Agent Mode: Header ─────────────────────────────────────── */
+.header-agent {
+  background: linear-gradient(135deg, #0f4c75 0%, #1b6ca8 100%);
+  border-bottom-color: #1e7aca;
+}
+
+.header-agent .chat-name,
+.header-agent .chat-status {
+  color: #e0f0ff;
+}
+
+.header-agent .chat-close {
+  color: #a8d4f5;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.end-session-btn-user {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border-radius: var(--radius-md);
+  padding: var(--space-1) var(--space-3);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.end-session-btn-user:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.header-agent .chat-close:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.avatar-agent {
+  background: linear-gradient(135deg, #0f4c75, #1b6ca8);
+  box-shadow: 0 4px 12px rgba(15, 76, 117, 0.4);
+  color: #fff !important;
+}
+
+.dot-agent {
+  background: #60d8a4;
+}
+
+.badge-agent {
+  color: #1b6ca8;
+}
+
+/* ── Agent FAB ─────────────────────────────────────────────── */
+.chat-fab.fab-agent {
+  background: linear-gradient(135deg, #0f4c75, #1b6ca8);
+  box-shadow: 0 8px 32px rgba(15, 76, 117, 0.4);
+}
+
+.fab-pulse.pulse-agent {
+  background: #60d8a4;
+}
+
+/* ── System Messages ───────────────────────────────────────── */
+.system-message {
+  align-self: center;
+  background: var(--color-surface-offset);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-4);
+  font-size: 11px;
+  color: var(--color-text-muted);
+  text-align: center;
+  font-style: italic;
+  max-width: 80%;
+}
+
+/* ── Agent Nudge Banner ────────────────────────────────────── */
+.agent-nudge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: linear-gradient(90deg, #e0f0ff, #f0f8ff);
+  border-top: 1px solid #a8d4f5;
+  font-size: var(--text-xs);
+  color: #0f4c75;
+  overflow: hidden;
+}
+
+.agent-nudge svg {
+  flex-shrink: 0;
+  color: #1b6ca8;
+}
+
+.agent-nudge span {
+  flex: 1;
+  font-weight: 500;
+}
+
+.nudge-btn {
+  background: #1b6ca8;
+  color: #fff;
+  border-radius: var(--radius-md);
+  padding: var(--space-1) var(--space-3);
+  font-size: 11px;
+  font-weight: 700;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.nudge-btn:hover {
+  background: #0f4c75;
+  transform: scale(1.05);
+}
+
+/* dark-mode nudge */
+@media (prefers-color-scheme: dark) {
+  .agent-nudge {
+    background: linear-gradient(90deg, #0f2a40, #0a2030);
+    border-top-color: #1b6ca8;
+    color: #a8d4f5;
+  }
+}
+
+/* ── Queue Overlay ─────────────────────────────────────────── */
+.queue-overlay {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in oklch, var(--color-surface) 85%, transparent);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border-radius: inherit;
+}
+
+.queue-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  box-shadow: var(--shadow-lg);
+  max-width: 260px;
+}
+
+.queue-spinner {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #e0f0ff, #f0f8ff);
+  border-radius: var(--radius-full);
+  display: grid;
+  place-items: center;
+  color: #1b6ca8;
+}
+
+.queue-spinner .spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.queue-title {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.queue-position {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  background: var(--color-surface-offset);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-divider);
+}
+
+.queue-position strong {
+  color: #1b6ca8;
+  font-size: var(--text-sm);
+}
+
+.queue-subtitle {
+  font-size: 11px;
+  color: var(--color-text-faint);
+  line-height: 1.5;
+}
+
+.queue-cancel {
+  margin-top: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.queue-cancel:hover {
+  color: #ef4444;
+}
+
+/* queue-overlay uses position:absolute, so chat-window needs overflow:hidden (already set above) */
